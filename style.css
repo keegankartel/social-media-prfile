@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  font-size: 20px;
+}
+:root{
+  --clr-nutral: rgba(128, 128, 128, 0.863);
+  --font-weight: 400;
+  
+}
+@font-face {
+  font-family: 'henken';
+  src: url(fonts/HankenGrotesk-VariableFont_wght.ttf);
+  font-weight: 400 700;
+}
+body{
+  position: relative;
+  font-family: henken;
+  background-color: darkcyan;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+/*background*/
+img[alt='buttom'],img[alt='top']{
+  position: absolute;
+  width: 1000px;
+  display: inline-block;
+  z-index: -1;
+}
+img[alt='buttom']{
+  bottom: -700px;
+  right:  -300px;
+  }
+img[alt='top']{
+  top:  -700px;
+  left: -300px;
+}
+
+/*main container*/
+
+.container{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  margin: auto;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+/*Middle section*/
+
+.middlediv{
+  position: relative;
+  padding: 50px 0 30px;
+  text-align: center;
+  width: 100%;
+  line-height: 35px;
+}
+.middlediv div, img[alt="profile-pic"]{
+  background-color:white;
+  width: 100px;
+  display: inline-block;
+  position: absolute;
+  top: -56px;
+  left: 115px;
+  border-radius: 100px;
+  padding:5px;
+  height: 100px;
+}
+h2[user="name"]{
+  text-transform: capitalize;
+  align-items: center;
+}
+h3{
+  font-weight: 400;
+  font-size: 15px; 
+}
+h3,.age,.lowerdiv span{
+  color: var(--clr-nutral);
+  font-size: 15px;
+}
+.age{
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px; 
+}
+
+/*Lower section*/
+.lowerdiv{
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  width:100%;
+  border-color:rgba(128, 128, 128, 0.308);
+  border-style: solid;
+  border-width:1px 0 0;
+}
+.lowerdiv span{
+  display: block;
+  justify-content: center;
+  font-weight:400;
+  font-size: 12px;
+  letter-spacing: 1px;  
+}
+.lowerdiv h2{
+  text-align: center;
+}
